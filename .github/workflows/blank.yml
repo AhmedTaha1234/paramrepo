@@ -26,6 +26,4 @@ jobs:
 
       # saying param
       - name: sayparam
-      - run: |
-          . ./sayparams.ps1
-          deploydb "hello"
+      - run: ./.github\workflows\sayparams.ps1
