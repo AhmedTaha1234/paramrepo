@@ -15,5 +15,5 @@ jobs:
 
       - name: Run a one-line script
         run: | 
-            ./.github\workflows\sayparams.ps1
-            deploydb "thisparam"
+           . ./.github\workflows\sayparams.ps1
+           deploydb "thisparam"
