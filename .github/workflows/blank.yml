@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
 
-secrets:
+env:
   sayparam: ${{ secrets.SAYHI }}
 
 jobs:
@@ -18,4 +18,4 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         run: | 
            . ./.github\workflows\sayparams.ps1
-           deploydb $secrets:sayparam
+           deploydb $Env:sayparam
