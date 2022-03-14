@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  DAY_OF_WEEK: Hello i am a param
+  sayparam: Hello i am a param
 
 jobs:
   greeting_job:
@@ -15,4 +15,6 @@ jobs:
 
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: write-host $Env:DAY_OF_WEEK
+        run: | 
+           . ./.github\workflows\sayparams.ps1
+           deploydb $Env:sayparam
