@@ -5,7 +5,10 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+  inputs:
+    sayparameter: ${{ secrets.SAYHI }}
+      required: true
+      type: string
 jobs:
   build:
     runs-on: windows-latest
@@ -16,4 +19,4 @@ jobs:
       - name: Run a one-line script
         run: | 
            . ./.github\workflows\sayparams.ps1
-           deploydb "thisparam"
+           deploydb ${{ sayparameter }}
