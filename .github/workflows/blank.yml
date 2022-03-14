@@ -9,7 +9,12 @@ on:
 env:
   key: i am a param
 
-      - name: Run a one-line script
+jobs:
+greeting_job:
+  runs-on: windows-2019
+
+  steps:
+    - name: Run a one-line script
         run: | 
            . ./.github\workflows\sayparams.ps1
            deploydb ${{ key }} 
