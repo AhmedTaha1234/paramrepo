@@ -12,9 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      with:
-        key: ${{ secrets.SAYHI }}
-
+         with:
+          key: ${{ secrets.SAYHI }}
       - name: Run a one-line script
         run: | 
            . ./.github\workflows\sayparams.ps1
