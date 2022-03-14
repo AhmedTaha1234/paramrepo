@@ -8,7 +8,7 @@ on:
 
 env:
   sayparam: ${{ secrets.SAYHI }}
-  hellosecret: ${{ secrets.SAYHI }}
+  HEAD_SHA: ${{ github.sha }}
 
 jobs:
   greeting_job:
@@ -19,4 +19,4 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         run: | 
            . ./.github\workflows\sayparams.ps1
-           deploydb $Env:sayparam
+           deploydb $Env:HEAD_SHA
