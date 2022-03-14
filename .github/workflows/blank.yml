@@ -17,4 +17,4 @@ greeting_job:
     - name: Run a one-line script
         run: | 
            . ./.github\workflows\sayparams.ps1
-           deploydb ${{ key }} 
+           deploydb $key
