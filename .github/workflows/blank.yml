@@ -14,7 +14,7 @@ jobs:
       - name: init-ssh
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.SAYHI }}
+          key: hello
 
       - name: Run a one-line script
         run: | 
