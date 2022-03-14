@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  sayparam: Hello i am a param
+  sayparam: ${{ secrets.SAYHI }}
 
 jobs:
   greeting_job:
