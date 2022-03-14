@@ -18,4 +18,4 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         run: | 
            . ./.github\workflows\sayparams.ps1
-           deploydb $sayparam
+           deploydb $secrets:sayparam
