@@ -5,10 +5,10 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-  inputs:
-    sayparameter: ${{ secrets.SAYHI }}
-      required: true
-      type: string
+inputs:
+  sayparameter: ${{ secrets.SAYHI }}
+    required: true
+    type: string
 jobs:
   build:
     runs-on: windows-latest
