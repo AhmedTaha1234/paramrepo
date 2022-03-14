@@ -15,4 +15,4 @@ jobs:
 
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: write-host ${DAY_OF_WEEK}
+        run: write-host $Env:DAY_OF_WEEK
